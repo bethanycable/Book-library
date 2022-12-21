@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const books = require('./routes/books');
+const bookRouter = require('./routes/books');
 
-app.use('/api/books', books);
+app.use('/api', bookRouter);
 app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   return res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
