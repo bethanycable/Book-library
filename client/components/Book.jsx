@@ -6,17 +6,18 @@ const Book = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch('/api/books').then((res) => res.json())
+    fetch('/api/readbooks').then((res) => res.json())
       .then((data) => {
+          // console.log(data)
           setBooks(data);
         });
   }, []);
 
 const bookItems = books.map((book, index) => {
-  return <li key={index}>{book.title} by {book.author}</li>
+  return <li key={book.book_id}>"{book.book_title}" by {book.first_name} {book.last_name}</li>
 })
   return (<div>
-    <p>This is a test script!</p>
+    {/* <p>This is a test script!</p> */}
     <ul>{bookItems}</ul>
     </div>);
 };

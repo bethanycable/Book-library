@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', 'Noto Sans', sans-serif;
+    background-color: #1B5AF7;
 }
 
 #root {
@@ -9,23 +10,29 @@ body {
 
 .nav {
    text-align: center;
+   padding: 5px;
+   background: linear-gradient(rgba(12, 39, 107, 1) 45%, rgba(12, 39, 107, 0.1)) ;
     h1 {
         font-size: 3rem;
         font-weight: 900;
         letter-spacing: .2rem;
+        color: #E5E5E5;
     }
 
-    .genre-list {padding: 0;
+    .genre-list {
+        margin-bottom: 15px;
+    }
+   
+    .hidden-div {
         display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: space-between;
-        border: 1px solid blue;
+        align-items: center;
+        justify-content: center;
     }
 
     .genre {
-        margin: 0 10px;
+        margin: 0 20px;
         white-space: normal;
+        display: inline-block;
         height: 50px;
         width: 125px;
         font-size: 1rem;
@@ -36,5 +43,10 @@ body {
     }
 }
 
-
-
+//.genre-list {
+//         padding: 0;
+//         display: flex;
+//         flex-direction: row;
+//         align-content: center;
+//         justify-content: space-between;
+// }
