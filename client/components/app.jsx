@@ -1,10 +1,11 @@
 import Book from './Book.jsx';
+import Navigation from './Navigation.jsx';
 import React from 'react';
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
+    <div className='container'>
+      <Navigation />
       <Book />
     </div>
   );

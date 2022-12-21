@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// import styles from './styles/styles.scss';
 import React from 'react';
 
 const Book = () => {

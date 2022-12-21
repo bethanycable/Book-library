@@ -3,19 +3,19 @@ const router = express.Router();
 
 const booksController = require('../controllers/bookControllers');
 
-router.get('/books', booksController.getBooks, (req, res) => {
-  // return res.json([
-  //   // {
-  //   //   title: 'The Graveyard Book',
-  //   //   author: 'Neil Gaimen',
-  //   // },
-  //   // {
-  //   //   title: 'Good Omens',
-  //   //   author: 'Neil Gaimen & Terry Pratchet',
-  //   // },
-  // ]);
+router.get('/readbooks', booksController.getBooksRead, (req, res) => {
+  return res.send(res.locals.readBooks);
+});
+router.post('/readbooks', booksController.addBooksRead, (req, res) => {
+  return res.send(res.locals.readBooks);
+});
 
-  return res.send('We were able to make a call to our database!');
+router.get('/likedbooks', booksController.getBooksLiked, (req, res) => {
+  return res.send(res.locals.likedBooks);
+});
+
+router.get('/dislikedbooks', booksController.getBooksDisliked, (req, res) => {
+  return res.send(res.locals.dislikedBooks);
 });
 
 module.exports = router;
