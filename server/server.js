@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const bookRouter = require('./routes/books');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use('/api', bookRouter);
 app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
