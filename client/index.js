@@ -1,4 +1,4 @@
-import App from './components/app.jsx';
+import App from './containers/app.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './styles/styles.scss';

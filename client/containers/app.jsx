@@ -1,5 +1,6 @@
-import Book from './Book.jsx';
-import Navigation from './Navigation.jsx';
+import Book from '../components/Book.jsx';
+import Footer from '../components/Footer.jsx';
+import Navigation from '../components/Navigation.jsx';
 import React from 'react';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div className='container'>
       <Navigation />
       <Book />
+      <Footer />
     </div>
   );
 };

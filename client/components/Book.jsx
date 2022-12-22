@@ -17,7 +17,6 @@ const bookItems = books.map((book, index) => {
   return <li key={book.book_id}>"{book.book_title}" by {book.first_name} {book.last_name}</li>
 })
   return (<div>
-    {/* <p>This is a test script!</p> */}
     <ul>{bookItems}</ul>
     </div>);
 };
