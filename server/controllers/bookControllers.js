@@ -45,8 +45,30 @@ booksController.getBooksDisliked = (req, res, next) => {
 booksController.addBooksRead = (req, res, next) => {
   const body = req.body;
 
+  // const authorQueryString = `SELECT author_id, first_name, last_name FROM authors WHERE authors.first_name = '($1)' AND authors.last_name = '($2)';`;
+  // const authorValues = [body.first_name, body.last_name];
+
+  // const newAuthorQuery =
+  //   'INSERT INTO authors (first_name, last_name) VALUES ($1, $2) RETURNING author_id;';
+
+  // db.query(authorQueryString, authorValues)
+  //   .then((response) => {
+  //     if (response === null || undefined) {
+  //       db.query(newAuthorQuery, authorValues)
+  //         .then((response) => {
+  //           console.log(response);
+  //         })
+  //         .catch((err) => next(err));
+  //     } else {
+  //       response.rows;
+  //     }
+  //   })
+  //   .catch((err) => {
+  //     return next(err);
+  //   });
+
   const bookQueryString =
-    'INSERT INTO books_read (book_title, author_id) VALUES ($1, $2) RETURNING _id';
+    'INSERT INTO books_read (book_title, author_id) VALUES ($1, $2) RETURNING _id;';
 
   const insertValues = [body.book_title, body.author_id];
   db.query(bookQueryString, insertValues)
