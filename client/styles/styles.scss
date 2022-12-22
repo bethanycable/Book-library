@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', 'Noto Sans', sans-serif;
-    background-color: #1B5AF7;
+    background-color: rgba(27, 90, 247, 0.65);
 }
 
 #root {
@@ -11,7 +11,7 @@ body {
 .nav {
    text-align: center;
    padding: 5px;
-   background: linear-gradient(rgba(12, 39, 107, 1) 20%, rgba(12, 39, 107, 0)) ;
+   background: linear-gradient(rgba(12, 39, 107, 1) 25%, rgba(12, 39, 107, 0)) ;
     h1 {
         font-size: 3rem;
         font-weight: 900;
@@ -34,7 +34,7 @@ body {
         white-space: normal;
         display: inline-block;
         height: 50px;
-        width: 125px;
+        width: 130px;
         font-size: 1rem;
         font-weight: 700;
         border: none;
@@ -45,7 +45,55 @@ body {
 
 
 .book-section {
-    
+    h3 {
+        text-align: center;
+        font-size: 2.6rem;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 48px;
+        margin: 48px;
+    }
+
+    .book-card {
+        background-color: #E5E5E5;
+        width: 275px;
+        min-height: 420px;
+        padding: .5rem;
+        position: relative;
+        border-radius: 20px;
+
+        h4 {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-top: 10px;
+        }
+
+        ul {
+            font-size: 0.75rem;
+            margin: 0;
+            padding: 0;
+            padding-left: 20px;
+        }
+
+        .add-book {
+            position: absolute;
+            right: 30%;
+            bottom: 0;
+            margin-bottom: 20px;
+            height: 35px;
+            width: 120px;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 15px;
+            background-color: #0C276B;
+            color: #E5E5E5;
+            cursor: pointer;
+        }
+    }
 }
 
 .footer {
