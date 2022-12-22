@@ -1,8 +1,12 @@
+import Book from '../components/Book.jsx'
 import React from 'react'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <div className='book-section'>
+      <Book />
+    </div>
+    
   )
 }
 

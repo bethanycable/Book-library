@@ -5,11 +5,11 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer'>
-        <p>Copyright © <br /> Mattern Studios</p>
+        <p className='copyright'>Copyright © <br /> Mattern Studios</p>
         <div className='social-icons'>
-            <a href='mailto:bethany.a.cable@gmail.com'><AiFillMail /></a>
-            <a href='https://www.linkedin.com/in/bethany-a-mattern/'><AiFillLinkedin /></a>
-            <a href='https://github.com/bethanycable'><AiFillGithub /></a>
+            <a href='mailto:bethany.a.cable@gmail.com' target="_blank"><AiFillMail size={'2em'} style={{color: '#E5E5E5'}}/></a>
+            <a href='https://www.linkedin.com/in/bethany-a-mattern/' target="_blank"><AiFillLinkedin size={'2em'} style={{color: '#E5E5E5'}}/></a>
+            <a href='https://github.com/bethanycable' target="_blank"><AiFillGithub size={'2em'} style={{color: '#E5E5E5'}}/></a>
         </div>
     </div>
   )
