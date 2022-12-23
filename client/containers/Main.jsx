@@ -1,18 +1,20 @@
-// import AddBookModal from '../components/AddBookModal.jsx';
+import React, {useState} from 'react'
+
+import AddBookModal from '../components/addBookModal.jsx'
 import BookCard from '../components/BookCard.jsx'
-import React from 'react'
 
 const Main = () => {
-  // const [modalOpen, setModalOpen] = useState(false);
+  const [ modalOpen, setModalOpen ] = useState(false);
+  const [ bookCardId, setBookCardId ] = useState('');
+  
 
   const bookCards = [
     { id:'readbooks', title: 'Read Books'}, 
     {id:'likedbooks', title: 'Liked Books'}, 
     {id: 'dislikedbooks', title: 'Disliked Books'}, 
     {id: 'toreadbooks', title: 'Books to Read'}].map((call, index) => {
-    return <BookCard key={index} id={call.id} title={call.title}/>
+    return <BookCard key={index} id={call.id} title={call.title} setModalOpen={setModalOpen} setBookCardId={setBookCardId}/>
   })
-  // console.log(bookCards)
 
   return (
     <div className='book-section'>
@@ -20,7 +22,7 @@ const Main = () => {
       <div className='card-container'>
         {bookCards}
       </div>
-      {/* {modalOpen && <AddBookModal key={id} setModalOpen={setModalOpen} id={id}/>} */}
+      {modalOpen && <AddBookModal setModalOpen={setModalOpen} id={bookCardId}/>}
     </div>
     
   )

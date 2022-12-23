@@ -7,7 +7,6 @@ const authorRouter = require('./routes/authors');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', bookRouter, authorRouter);
-// app.use('/auth', authorRouter);
 app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (req, res) => {

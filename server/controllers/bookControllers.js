@@ -7,7 +7,6 @@ booksController.getBooksRead = (req, res, next) => {
     'SELECT books_read.*, authors.* FROM books_read LEFT OUTER JOIN authors ON books_read.author_id = authors.author_id;';
   db.query(queryString)
     .then((result) => {
-      //   console.log('SQL Call: ', result.rows);
       res.locals.readBooks = result.rows;
       return next();
     })
@@ -35,6 +34,19 @@ booksController.getBooksDisliked = (req, res, next) => {
   db.query(queryString)
     .then((result) => {
       res.locals.dislikedBooks = result.rows;
+      return next();
+    })
+    .catch((err) => {
+      return next(err);
+    });
+};
+
+booksController.getToReadBooks = (req, res, next) => {
+  const queryString =
+    'SELECT books_to_read.*, authors.* FROM books_to_read LEFT OUTER JOIN authors ON books_to_read.author_id = authors.author_id;';
+  db.query(queryString)
+    .then((result) => {
+      res.locals.toReadBooks = result.rows;
       return next();
     })
     .catch((err) => {
